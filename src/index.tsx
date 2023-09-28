@@ -1,9 +1,12 @@
 import {render} from "react-dom";
 import cls from './index.module.scss'
-
+import App from "./App";
+import {BrowserRouter} from "react-router-dom";
 
 
 render(
-  <div className={cls.nn}>asdsdvdsfdffdsfzxczxcxzsd</div>,
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>,
   document.getElementById('root')
 )
