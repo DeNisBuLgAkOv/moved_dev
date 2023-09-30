@@ -1,6 +1,5 @@
 import {BuildOptions} from "./types/config";
 import webpack from "webpack";
-import path from "path";
 import {BuildPlugins} from "./buildPlugins";
 import {BuildLoaders} from "./buildLoaders";
 import {BuildResolve} from "./buildResolve";
@@ -22,7 +21,7 @@ export function BuildWebpackconfig(options:BuildOptions): webpack.Configuration 
     module: {
       rules:BuildLoaders(options)
     },
-    resolve: BuildResolve(),
+    resolve: BuildResolve(options),
     devServer: isDev? BuildDevServer(options): undefined,
   };
 }
