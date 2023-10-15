@@ -6,6 +6,9 @@ export function BuildDevServer(options: BuildOptions):DevServerConfiguration {
   return {
     port: options.port,
     open: true,
-    historyApiFallback:true
+    historyApiFallback:true,
+    client: {
+      overlay: false,
+    },
   }
 }
